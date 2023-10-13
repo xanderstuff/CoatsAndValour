@@ -1,7 +1,7 @@
 package dev.sterner.datagen;
 
 import dev.sterner.registry.CAVObjects;
-import dev.sterner.registry.CoatsAndValourMobEffects;
+import dev.sterner.registry.CAVMobEffects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -17,7 +17,7 @@ public class CAVLanguageProvider extends FabricLanguageProvider {
         builder.add(CAVObjects.PISTOL, "Pistol");
         builder.add(CAVObjects.MUSKET, "Musket");
 //        builder.add(CAVObjects.NOCK_GUN, "Nock Gun");
-//        builder.add(CAVObjects.DUCKFOT, "Duckfoot");
+//        builder.add(CAVObjects.DUCKFOOT, "Duckfoot");
 //        builder.add(CAVObjects.SANGUINE_HUNTER, "Sanguine Hunter");
 //        builder.add(CAVObjects.PISTOL_SWORD, "Pistol Sword");
 
@@ -38,8 +38,8 @@ public class CAVLanguageProvider extends FabricLanguageProvider {
         builder.add(CAVObjects.SILVER_SHOT, "Silver Shot");
         builder.add(CAVObjects.SPONGE, "Sponge");
 
-        builder.add(CoatsAndValourMobEffects.BLEED, "Bleed");
-        builder.add(CoatsAndValourMobEffects.GANGRENE, "Gangrene");
+        builder.add(CAVMobEffects.BLEED, "Bleed");
+        builder.add(CAVMobEffects.GANGRENE, "Gangrene");
 
         builder.add(CAVObjects.DEBUG, "Debug Wand");
     }

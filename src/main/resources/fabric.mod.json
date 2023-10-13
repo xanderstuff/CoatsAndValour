@@ -22,7 +22,7 @@
       "dev.sterner.CoatsAndValourClient"
     ],
     "fabric-datagen": [
-      "dev.sterner.datagen.CoatsAndValourDataGenerator"
+      "dev.sterner.datagen.CAVDataGenerator"
     ],
     "emi": [
       "dev.sterner.client.integration.emi.CAVEmiPlugin"

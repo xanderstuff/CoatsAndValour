@@ -2,7 +2,7 @@ package dev.sterner.mixin;
 
 import dev.sterner.CoatsAndValourEntity;
 import dev.sterner.registry.CAVComponents;
-import dev.sterner.registry.CoatsAndValourMobEffects;
+import dev.sterner.registry.CAVMobEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,27 +14,33 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public final class LivingEntityMixin implements CoatsAndValourEntity {
 
     @Inject(method = "tick", at = @At("HEAD"))
-    public void tick(CallbackInfo ci) {
-        if (!((LivingEntity) (Object) this).getWorld().isClient) {
-            var bleed = ((LivingEntity) (Object) this).getComponent(CAVComponents.BLEED);
+    public void cav$tick(CallbackInfo ci) {
+        var thiz = (LivingEntity) (Object) this;
+        if (!thiz.getWorld().isClient) {
+            var bleed = thiz.getComponent(CAVComponents.BLEED);
 
             if (isBleeding()) {
                 var bleedTime = bleed.getBleedTime();
                 if (bleedTime < 1200) {
                     bleed.setBleedTime(bleedTime + 1);
-                } else if (!((LivingEntity) (Object) this).hasStatusEffect(CoatsAndValourMobEffects.GANGRENE)) {
-                    ((LivingEntity) (Object) this).addStatusEffect(new StatusEffectInstance(CoatsAndValourMobEffects.GANGRENE, 600, 1));
+                } else if (!hasGangrene()) {
+                    thiz.addStatusEffect(new StatusEffectInstance(CAVMobEffects.GANGRENE, 600, 1));
                 }
             } else {
                 bleed.setBleedTime(0);
             }
 
-            ((LivingEntity) (Object) this).syncComponent(CAVComponents.BLEED);
+            thiz.syncComponent(CAVComponents.BLEED);
         }
     }
 
     @Override
     public boolean isBleeding() {
-        return ((LivingEntity) (Object) this).hasStatusEffect(CoatsAndValourMobEffects.BLEED);
+        return ((LivingEntity) (Object) this).hasStatusEffect(CAVMobEffects.BLEED);
+    }
+
+    @Override
+    public boolean hasGangrene() {
+        return ((LivingEntity) (Object) this).hasStatusEffect(CAVMobEffects.GANGRENE);
     }
 }

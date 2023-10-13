@@ -7,11 +7,11 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
-public final class CoatsAndValourMobEffects {
+public final class CAVMobEffects {
     public static final StatusEffect BLEED = new BleedEffect();
     public static final StatusEffect GANGRENE = new GangreneEffect();
 
-    private CoatsAndValourMobEffects() {}
+    private CAVMobEffects() {}
 
     public static void registerAll() {
         register("bleed", BLEED);

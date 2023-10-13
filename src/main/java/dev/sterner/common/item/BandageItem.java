@@ -1,6 +1,6 @@
 package dev.sterner.common.item;
 
-import dev.sterner.registry.CoatsAndValourMobEffects;
+import dev.sterner.registry.CAVMobEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,9 +18,9 @@ public final class BandageItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         var itemStack = user.getStackInHand(hand);
 
-        if (user.hasStatusEffect(CoatsAndValourMobEffects.BLEED)) {
+        if (user.hasStatusEffect(CAVMobEffects.BLEED)) {
             if (!world.isClient) {
-                user.removeStatusEffect(CoatsAndValourMobEffects.BLEED);
+                user.removeStatusEffect(CAVMobEffects.BLEED);
 
                 itemStack.decrement(1);
 

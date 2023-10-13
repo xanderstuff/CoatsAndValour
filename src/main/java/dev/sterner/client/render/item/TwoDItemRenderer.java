@@ -1,6 +1,5 @@
 package dev.sterner.client.render.item;
 
-import dev.sterner.common.util.CAVUtils;
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
 import net.minecraft.client.MinecraftClient;
@@ -20,6 +19,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
 public class TwoDItemRenderer implements BuiltinItemRendererRegistry.DynamicItemRenderer, IdentifiableResourceReloadListener {
+    private static final int MAX_LIGHT = 0x00F000F0; // 15728880
+
     private final Identifier id;
     private final Identifier itemId;
     private ItemRenderer itemRenderer;
@@ -55,7 +56,7 @@ public class TwoDItemRenderer implements BuiltinItemRendererRegistry.DynamicItem
                 this.inventoryModel = MinecraftClient.getInstance().getBakedModelManager().getModel(new ModelIdentifier(itemId.withPath(itemId.getPath() + "_gui"), "inventory"));
             }
             DiffuseLighting.enableGuiDepthLighting();
-            renderItem(itemRenderer, stack, mode, false, matrices, vertexConsumers, CAVUtils.MAX_LIGHT, overlay, this.inventoryModel);
+            renderItem(itemRenderer, stack, mode, false, matrices, vertexConsumers, MAX_LIGHT, overlay, this.inventoryModel);
             DiffuseLighting.disableGuiDepthLighting();
         }
 
