@@ -66,14 +66,19 @@
 
 ## Mechanics
 - [ ] bleeding
-  - [ ] slowly loose health
+  - [ ] slowly loose health over time
+  - [x] status effect icon
   - [ ] force disable particles
   - [ ] custom blood dripping particle
-  - [ ] add gangrene after some time
-  - [ ] status effect translation string
+  - [x] add gangrene after some time
+  - [ ] (fix) missing status effect translation string
+  - [ ] (fix) don't spam component update packets
 - [ ] gangrene
-  - [ ] ... 
-  - [ ] status effect translation string
+  - [x] increases level over time
+  - [x] status effect icon
+  - [x] health bar icon overlay
+  - [ ] (fix) missing status effect translation string
+  - [ ] (fix) don't spam component update packets
 - [ ] customizable nation uniforms
   - [ ] Textile Block
     - [ ] interactable block (see `CraftingTableBlock`)

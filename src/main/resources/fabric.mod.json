@@ -47,7 +47,8 @@
     "cardinal-components": [
       "coats-and-valour:player",
       "coats-and-valour:nation_chunk",
-      "coats-and-valour:bleed"
+      "coats-and-valour:bleed",
+      "coats-and-valour:gangrene"
     ],
     "loom:injected_interfaces": {
       "net/minecraft/class_2791": ["dev/sterner/common/NationChunk"],
