@@ -16,7 +16,7 @@ import net.minecraft.entity.player.PlayerEntity;
 
 public class CAVComponents implements EntityComponentInitializer, ChunkComponentInitializer {
     public static final ComponentKey<PlayerDataComponent> PLAYER_COMPONENT = ComponentRegistry.getOrCreate(CoatsAndValour.id("player"), PlayerDataComponent.class);
-    public static final ComponentKey<NationChunkComponent> NATION_CHUNK = ComponentRegistry.getOrCreate(CoatsAndValour.id("nation_chunk"), NationChunkComponent.class);
+//    public static final ComponentKey<NationChunkComponent> NATION_CHUNK = ComponentRegistry.getOrCreate(CoatsAndValour.id("nation_chunk"), NationChunkComponent.class);
     public static final ComponentKey<BleedComponent> BLEED = ComponentRegistry.getOrCreate(CoatsAndValour.id("bleed"), BleedComponent.class);
 
 
@@ -28,6 +28,6 @@ public class CAVComponents implements EntityComponentInitializer, ChunkComponent
 
     @Override
     public void registerChunkComponentFactories(ChunkComponentFactoryRegistry registry) {
-        registry.register(NATION_CHUNK, NationChunkComponent.class, chunk -> new NationChunkComponent());
+//        registry.register(NATION_CHUNK, NationChunkComponent.class, chunk -> new NationChunkComponent());
     }
 }

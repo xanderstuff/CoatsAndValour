@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 
 import java.util.Optional;
 
+@Deprecated
 @Mixin(Chunk.class)
 public final class ChunkMixin implements NationChunk {
     @Override

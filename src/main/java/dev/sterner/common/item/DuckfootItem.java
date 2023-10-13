@@ -16,6 +16,7 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+@Deprecated(forRemoval = false)
 public class DuckfootItem extends GeoCockableGunItem implements IGeoDualModel {
     private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);

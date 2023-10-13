@@ -21,11 +21,11 @@ public class CAVModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator generator) {
         generator.register(CAVObjects.BANDAGE, Models.GENERATED);
-        generator.register(CAVObjects.BATTLE_MAP, Models.GENERATED);
+//        generator.register(CAVObjects.BATTLE_MAP, Models.GENERATED);
         generator.register(CAVObjects.BLOCK_RAMMER, Models.HANDHELD);
         generator.register(CAVObjects.BONE_SAW, Models.HANDHELD);
         generator.register(CAVObjects.CASESHOT, Models.GENERATED);
-        generator.register(CAVObjects.NATION_FLAG, Models.HANDHELD);
+//        generator.register(CAVObjects.NATION_FLAG, Models.HANDHELD);
         generator.register(CAVObjects.POWDER_CHARGE, Models.GENERATED);
         generator.register(CAVObjects.RAMROD, Models.HANDHELD);
         generator.register(CAVObjects.ROUNDSHOT, Models.GENERATED);

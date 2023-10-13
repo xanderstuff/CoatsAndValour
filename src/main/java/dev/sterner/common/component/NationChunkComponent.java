@@ -4,6 +4,7 @@ import dev.onyxstudios.cca.api.v3.component.ComponentV3;
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import net.minecraft.nbt.NbtCompound;
 
+@Deprecated
 public final class NationChunkComponent implements AutoSyncedComponent, ComponentV3 {
     @Override
     public void readFromNbt(NbtCompound tag) {

@@ -9,7 +9,6 @@
     "PlayerEntityRendererMixin"
   ],
   "mixins": [
-    "ChunkMixin",
     "LivingEntityMixin"
   ],
   "injectors": {

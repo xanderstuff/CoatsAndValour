@@ -34,10 +34,10 @@ public interface CAVObjects {
     Item PISTOL = register("pistol", new PistolItem(new Item.Settings(), new GunProperties.Builder().range(32).maxAmmo(1).reloadTicks(20 * 4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
     Item BLUNDERBUSS = register("blunderbuss", new BlunderbussItem(new Item.Settings(), new GunProperties.Builder().range(32).maxAmmo(1).reloadTicks(20 * 4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
     Item MUSKET = register("musket", new MusketItem(new Item.Settings(), new GunProperties.Builder().range(32).maxAmmo(1).reloadTicks(20 * 4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
-    Item DUCKFOT = register("duckfoot", new DuckfootItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(4).barrels(4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
-    Item NOCK_GUN = register("nock_gun", new NockItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(3).barrels(3).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
-    Item SANGUINE_HUNTER = register("sanguine_hunter", new SanguineHunterItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(3).barrels(3).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
-    Item PISTOL_SWORD = register("pistol_sword", new PistolSwordItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(3).barrels(3).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
+//    Item DUCKFOT = register("duckfoot", new DuckfootItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(4).barrels(4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
+//    Item NOCK_GUN = register("nock_gun", new NockItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(3).barrels(3).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
+//    Item SANGUINE_HUNTER = register("sanguine_hunter", new SanguineHunterItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(3).barrels(3).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
+//    Item PISTOL_SWORD = register("pistol_sword", new PistolSwordItem(new Item.Settings(), new GunProperties.Builder().range(24).maxAmmo(3).barrels(3).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
     Item SABRE = register("sabre", new SabreItem(new Item.Settings()));
 
     Item MUSKET_SHOT = register("musket_shot", new AmmoItem(new Item.Settings(), new ProjectileProperties.Builder().recoilPower(10).damageSource(DamageTypes.GENERIC).build()));
@@ -49,9 +49,9 @@ public interface CAVObjects {
     Item SHELLSHOT = register("shellshot", new Item(new Item.Settings()));
     Item POWDER_CHARGE = register("powder_charge", new Item(new Item.Settings()));
     Item BANDAGE = register("bandage", new BandageItem(new Item.Settings()));
-    Item BATTLE_MAP = register("battle_map", new Item(new Item.Settings()));
+//    Item BATTLE_MAP = register("battle_map", new Item(new Item.Settings()));
     Item BONE_SAW = register("bone_saw", new Item(new Item.Settings()));
-    Item NATION_FLAG = register("nation_flag", new Item(new Item.Settings()));
+//    Item NATION_FLAG = register("nation_flag", new Item(new Item.Settings()));
     Item RAMROD = register("ramrod", new Item(new Item.Settings()));
     Item BLOCK_RAMMER = register("block_rammer", new Item(new Item.Settings()));
     Item SPONGE = register("sponge", new Item(new Item.Settings()));
