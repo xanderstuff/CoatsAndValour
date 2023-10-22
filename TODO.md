@@ -71,13 +71,13 @@
   - [ ] force disable particles
   - [ ] custom blood dripping particle
   - [x] add gangrene after some time
-  - [ ] (fix) missing status effect translation string
+  - [x] (fix) missing status effect translation string
   - [ ] (fix) don't spam component update packets
 - [ ] gangrene
   - [x] increases level over time
   - [x] status effect icon
   - [x] health bar icon overlay
-  - [ ] (fix) missing status effect translation string
+  - [x] (fix) missing status effect translation string
   - [ ] (fix) don't spam component update packets
 - [ ] customizable nation uniforms
   - [ ] Textile Block
