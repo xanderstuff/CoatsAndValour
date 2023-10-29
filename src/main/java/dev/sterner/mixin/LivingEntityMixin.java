@@ -18,6 +18,7 @@ public final class LivingEntityMixin implements CoatsAndValourEntity {
     @Inject(method = "tick", at = @At("HEAD"))
     public void cav$tick(CallbackInfo ci) {
         if (!((LivingEntity) (Object) this).getWorld().isClient) {
+            // server-side only
             updateBleeding();
             updateGangrene();
         }
@@ -31,14 +32,17 @@ public final class LivingEntityMixin implements CoatsAndValourEntity {
         if (isBleeding()) {
             if (bleedTime < 1200) { // use 80 for testing
                 bleed.setBleedTime(bleedTime + 1);
+                // sending a packet every tick per entity that is bleeding is still somewhat excessive,
+                // but in normal gameplay it is uncommon to have this effect, so this is adequate (KISS).
+                // I suppose we could even just send this packet to clients every x ticks
+                thiz.syncComponent(CAVComponents.BLEED);
             } else if (!hasGangrene()) {
                 GangreneEffect.applyDefaultEffect(thiz);
             }
-        } else {
+        } else if (bleedTime != 0) { // only update the first time the state changes from on -> off
             bleed.setBleedTime(0);
+            thiz.syncComponent(CAVComponents.BLEED);
         }
-
-        thiz.syncComponent(CAVComponents.BLEED); //FIXME: packet spam! 1 packet per entity per tick
     }
 
     @Unique
@@ -49,12 +53,15 @@ public final class LivingEntityMixin implements CoatsAndValourEntity {
         if (hasGangrene()) {
             gangrene.setGangreneTime(gangreneTime + 1);
             gangrene.setGangreneLevel(1 + MathHelper.floor((float) gangreneTime / GangreneEffect.TICKS_PER_INCREASE));
-        } else {
+            // sending a packet every tick per entity that has active gangrene is still somewhat excessive,
+            // but in normal gameplay it is uncommon to have this effect, so this is adequate (KISS).
+            // I suppose we could even just send this packet to clients every x ticks
+            thiz.syncComponent(CAVComponents.GANGRENE);
+        } else if (gangrene.getGangreneLevel() != 0 || gangreneTime != 0) { // only update the first time the state changes from on -> off
             gangrene.setGangreneTime(0);
             gangrene.setGangreneLevel(0);
+            thiz.syncComponent(CAVComponents.GANGRENE);
         }
-
-        thiz.syncComponent(CAVComponents.GANGRENE); //FIXME: packet spam! 1 packet per entity per tick
     }
 
     @Override

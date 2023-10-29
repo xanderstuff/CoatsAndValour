@@ -72,13 +72,13 @@
   - [ ] custom blood dripping particle
   - [x] add gangrene after some time
   - [x] (fix) missing status effect translation string
-  - [ ] (fix) don't spam component update packets
+  - [x] (fix) don't spam component update packets
 - [ ] gangrene
   - [x] increases level over time
   - [x] status effect icon
   - [x] health bar icon overlay
   - [x] (fix) missing status effect translation string
-  - [ ] (fix) don't spam component update packets
+  - [x] (fix) don't spam component update packets
 - [ ] customizable nation uniforms
   - [ ] Textile Block
     - [ ] interactable block (see `CraftingTableBlock`)
