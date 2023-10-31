@@ -19,14 +19,26 @@
     - [ ] Cutlass
     - [ ] Sabre
   - guns
+    - [ ] Abstract gun
+      - [ ] ...
     - [ ] Musket
+      - [ ] load states (UNLOADED, HALF_COCKED, PRIMED(cocked?), LOADED) (note: other guns can have more or less load states)
+      - [ ] item tooltip shows load state
+      - [ ] animations
+        - [ ] press and hold USE button until completion to advance, like loading a crossbow
+        - [ ] half cock, requires nothing (10 ticks, UNLOADED -> HALF_COCKED)
+        - [ ] priming, requires gunpowder (10 ticks, HALF_COCKED -> PRIMED) -> consumes 1 gunpowder
+        - [ ] reloading, requires compatible ammo (shot/silver shot) (60 ticks, PRIMED -> LOADED)
+        - [ ] firing, requires nothing (?? ticks, LOADED -> UNLOADED)
     - [ ] Blunderbuss
     - [ ] Pistol
 
 - ammo
   - [ ] Shot
   - [ ] Silver Shot
-    - [ ] Silver Ingot (would this be from another mod? or how should silver be added?)
+    - [ ] can be crafted with `c:silver_ingot` from other mods if available (double-check format of common 'c' tags)
+    - [ ] can be crafted with a smite enchantment book
+      - problem: the recipe system is not specific to NBT data (enchantments) without doing something like vanilla's custom firework/map recipe jank
   - [ ] Roundshot
   - [ ] Caseshot
   - [ ] Shellshot
@@ -46,23 +58,24 @@
 
 ## Entities
 - [ ] Field Cannon
-  - animations
-    - [ ] loading 1 (add powder charge?)
-    - [ ] loading 2 (add ammo)
-    - [ ] loading 3 (use block rammer?)
-    - [ ] loading 4 (use ???)
-    - [ ] (my idea) fuse lit countdown (when complete, trigger firing)
-    - [ ] firing (probably don't handle smoke particles here. Handle it when firing a projectile)
-    - [ ] cleaning (use Sponge)
-    - [ ] ~~self-destruct explosion~~ (may not need an animation for this, perhaps just use normal explosion particles)
-  - [ ] load state <store which items are currently loaded>
-    - [ ] if loaded, a little fuse rope texture appears
-  - [ ] able to fire projectiles (depends on what type of ammo is currently loaded)
-  - [ ] use flint+steel to fire if loaded
+  - [ ] store load progress state
+    - [ ] if loaded, a little fuse rope texture appears (if state = READY_TO_FIRE)
+  - [ ] advance load progress by interacting with the correct item (some code in item class)
+    - [ ] powder charge (consumes 1) (EMPTY -> HAS_POWDER)
+    - [ ] block rammer (infinite use) (HAS_POWDER -> HAS_COMPACTED_POWDER)
+    - [ ] cannon ball (roundshot/shellshot/caseshot) (consumes 1) (HAS_COMPACTED_POWDER -> HAS_PROJECTILE)
+    - [ ] block rammer, again (infinite use) (HAS_PROJECTILE -> READY_TO_FIRE)
+    - [ ] flint & steel (-1 durability) (READY_TO_FIRE -> EMPTY)
+    - [ ] countdown timer to control how long it takes to move from one state to the next (different amounts for each state)
+  - [ ] store which cannon ball type is currently loaded
+  - [ ] fire projectiles (depends on which cannon ball type is currently loaded)
   - [ ] able to be mounted by Players, use WASD to move (slowly...)
-    - [ ] override the typical strafing of A/D keys with left/right rotation instead (remember: movement is clientside)
-  - [ ] self-destruct chance (residue explosives build up after each use, but can be cleaned with Sponge, see tnt explosion)
-  - [ ] can be leaded to horses, camels, or boats
+    - [ ] override the typical strafing of A/D keys with left/right rotation instead (see: vanilla boats - client-side movement)
+    - [ ] can also be aimed by players (angle up/down) (how should this be controlled?)
+  - [ ] store self-destruct chance (residue explosives build up after each use)
+  - [ ] self-destruct explosion (use normal explosion particles, see: TNT)
+  - [ ] can be cleaned using a Sponge to reset self-destruct chance
+  - [ ] can be leaded to horses, camels, or boats* to move (* how should it interact with water?)
 
 ## Mechanics
 - [ ] bleeding
