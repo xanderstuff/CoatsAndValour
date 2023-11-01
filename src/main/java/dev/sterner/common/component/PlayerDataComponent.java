@@ -11,7 +11,9 @@ import net.minecraft.nbt.NbtCompound;
 public class PlayerDataComponent implements AutoSyncedComponent {
 
     public PlayerEntity player;
-    public BipedEntityModel<AbstractClientPlayerEntity> playerModel;
+    //FIXME: player model (rendering) is client-sided only, so this needs to be moved or else this will crash in a dedicated server environment
+    // Perhaps move this to a client-sided mixin where it'd (likely) be used?
+//    public BipedEntityModel<AbstractClientPlayerEntity> playerModel;
     private boolean rightLegPegged = false;
     private boolean leftLegPegged = false;
     private boolean rightArmHooker = false;
@@ -37,19 +39,21 @@ public class PlayerDataComponent implements AutoSyncedComponent {
         nbt.putBoolean("LeftArm", getLeftArmHooker());
     }
 
-    public void updatePlayerModel() {
-        if (playerModel != null) {
-            playerModel.leftArm.visible = !getLeftArmHooker();
-            playerModel.rightArm.visible = !getRightArmHooker();
-            playerModel.leftLeg.visible = !getLeftLegPegged();
-            playerModel.rightLeg.visible = !getRightLegPegged();
-        }
-    }
-
-    public void setPlayerModel(PlayerEntityModel<AbstractClientPlayerEntity> playerEntityModel) {
-        this.playerModel = playerEntityModel;
-        CAVComponents.PLAYER_COMPONENT.sync(player);
-    }
+	//FIXME: player model (rendering) is client-sided only, so this needs to be moved or else this will crash in a dedicated server environment
+	// Perhaps move this to a client-sided mixin where it'd (likely) be used?
+//    public void updatePlayerModel() {
+//        if (playerModel != null) {
+//            playerModel.leftArm.visible = !getLeftArmHooker();
+//            playerModel.rightArm.visible = !getRightArmHooker();
+//            playerModel.leftLeg.visible = !getLeftLegPegged();
+//            playerModel.rightLeg.visible = !getRightLegPegged();
+//        }
+//    }
+//
+//    public void setPlayerModel(PlayerEntityModel<AbstractClientPlayerEntity> playerEntityModel) {
+//        this.playerModel = playerEntityModel;
+//        CAVComponents.PLAYER_COMPONENT.sync(player);
+//    }
 
     public void setRightLeg(boolean pegged) {
         this.rightLegPegged = pegged;
