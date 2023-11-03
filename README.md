@@ -1,4 +1,5 @@
-# Coats and Valour
+<!-- ![Mod icon](images/logo_4.png)` -->
+<h1><img src="images/logo_4.png" alt="Mod icon" height="64"/> Coats and Valour</h1>
 
 An ‘authentic’ revolutionary warfare experience in Minecraft.
 
