@@ -30,7 +30,7 @@ public class CAVRecipeProvider extends FabricRecipeProvider {
 //				.criterion(hasItem(CAVObjects.INPUT3), conditionsFromItem(CAVObjects.INPUT3))
 //				.offerTo(exporter);
 
-//		ShapedRecipeJsonBuilder.create(RecipeCategory.SOMETHING, ModItems.RESULT, 1)
+//		ShapedRecipeJsonBuilder.create(RecipeCategory.SOMETHING, CAVObjects.RESULT, 1)
 //				.input('A', CAVObjects.INPUT1)
 //				.input('B', CAVObjects.INPUT2)
 //				.input('S', Items.STICK)
@@ -150,6 +150,23 @@ public class CAVRecipeProvider extends FabricRecipeProvider {
 				.pattern(" s ")
 				.pattern("tnt")
 				.criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+				.offerTo(exporter);
+
+		// misc items
+		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, CAVObjects.BANDAGE, 1)
+				.input('w', ItemTags.WOOL)
+				.input('s', Items.STRING)
+				.pattern("sw")
+				.pattern("ss")
+				.criterion("has_wool", conditionsFromTag(ItemTags.WOOL))
+				.offerTo(exporter);
+		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, CAVObjects.BONE_SAW, 1)
+				.input('i', Items.IRON_INGOT)
+				.input('n', Items.IRON_NUGGET)
+				.input('s', Items.STICK)
+				.pattern("iis")
+				.pattern("nn ")
+				.criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
 				.offerTo(exporter);
 	}
 }

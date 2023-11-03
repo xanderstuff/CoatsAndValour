@@ -53,7 +53,12 @@
 
 - other items to be used by players 
   - [ ] Bandages
+    - [x] item and recipe
+    - [ ] stops bleeding
   - [ ] Bone Saw
+    - [x] item and recipe
+    - [ ] removes the gangrene effect at the cost of maximum hp being reduced
+  - [ ] Textile Block (see #mechanics - Textile Block)
   - [ ] Nation Uniform: Hat (see #mechanics - customizable nation uniforms)
   - [ ] Nation Uniform: Coat (see #mechanics - customizable nation uniforms)
   - [ ] Nation Uniform: Breeches (see #mechanics - customizable nation uniforms)
@@ -86,11 +91,13 @@
   - [x] status effect icon
   - [ ] force disable particles
   - [ ] custom blood dripping particle
-  - [x] add gangrene after some time
+  - [x] ~~add gangrene after some time~~ (edit: this simple behaviour is incorrect. It should be replaced with the todo item below)
+  - [ ] after removing the bleeding effect (with bandages), if the player does not heal back to full health after X time (config default=1200 ticks), they then get gangrene
   - [x] (fix) missing status effect translation string
   - [x] (fix) don't spam component update packets
 - [ ] gangrene
   - [x] increases level over time
+  - [ ] once level reaches the maximum hp, the entity dies
   - [x] status effect icon
   - [x] health bar icon overlay
   - [x] (fix) missing status effect translation string
