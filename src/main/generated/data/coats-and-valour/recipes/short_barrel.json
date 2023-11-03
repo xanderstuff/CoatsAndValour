@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "n": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "nnn"
+  ],
+  "result": {
+    "item": "coats-and-valour:short_barrel"
+  },
+  "show_notification": true
+}

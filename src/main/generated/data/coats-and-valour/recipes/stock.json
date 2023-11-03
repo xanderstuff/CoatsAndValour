@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "w": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "www",
+    " ww"
+  ],
+  "result": {
+    "item": "coats-and-valour:stock"
+  },
+  "show_notification": true
+}

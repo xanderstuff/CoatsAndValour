@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "n": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "i  ",
+    "nnn"
+  ],
+  "result": {
+    "item": "coats-and-valour:bayonet"
+  },
+  "show_notification": true
+}

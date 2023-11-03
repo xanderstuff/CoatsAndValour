@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "n": {
+      "item": "minecraft:iron_nugget"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "nsc"
+  ],
+  "result": {
+    "item": "coats-and-valour:ramrod"
+  },
+  "show_notification": true
+}
