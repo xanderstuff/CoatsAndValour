@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "n": {
+      "item": "minecraft:iron_nugget"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "iis",
+    "nn "
+  ],
+  "result": {
+    "item": "coats-and-valour:bone_saw"
+  },
+  "show_notification": true
+}
