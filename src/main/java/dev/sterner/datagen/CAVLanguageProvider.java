@@ -31,12 +31,28 @@ public class CAVLanguageProvider extends FabricLanguageProvider {
         builder.add(CAVObjects.PELLET_SHOT, "Pellet Shot");
         builder.add(CAVObjects.PISTOL_SHOT, "Pistol Shot");
         builder.add(CAVObjects.POWDER_CHARGE, "Powder Charge");
-        builder.add(CAVObjects.RAMROD, "Ramrod");
         builder.add(CAVObjects.ROUNDSHOT, "Roundshot");
         builder.add(CAVObjects.SABRE, "Sabre");
         builder.add(CAVObjects.SHELLSHOT, "Shellshot");
         builder.add(CAVObjects.SILVER_SHOT, "Silver Shot");
         builder.add(CAVObjects.SPONGE, "Sponge");
+
+        // crafting ingredients (Tier 1)
+        builder.add(CAVObjects.BAYONET, "Bayonet");
+        builder.add(CAVObjects.STOCK, "Stock");
+        builder.add(CAVObjects.GRIP, "Grip");
+        builder.add(CAVObjects.LONG_BARREL, "Long Barrel");
+        builder.add(CAVObjects.SHORT_BARREL, "Short Barrel");
+        builder.add(CAVObjects.THICK_BARREL, "Thick Barrel");
+        builder.add(CAVObjects.RAMROD, "Ramrod");
+        builder.add(CAVObjects.FLINTLOCK_MECHANISM, "Flintlock Mechanism");
+        builder.add(CAVObjects.CYLINDER, "Cylinder");
+        builder.add(CAVObjects.SPRING, "Spring");
+
+        // crafting ingredients (Tier 2)
+        builder.add(CAVObjects.CRUDE_PERCUSSION_MECHANISM, "Crude Percussion Mechanism");
+        builder.add(CAVObjects.BOLT, "Bolt");
+        builder.add(CAVObjects.SCOPE, "Scope");
 
         builder.add(CAVMobEffects.BLEED, "Bleed");
         builder.add(CAVMobEffects.GANGRENE, "Gangrene");

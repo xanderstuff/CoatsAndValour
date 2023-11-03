@@ -1,17 +1,20 @@
 ## Items
 - simple intermediate crafting items
-  - [ ] Bayonet
-  - [ ] Stock
-  - [ ] Grip
-  - [ ] Long Barrel
-  - [ ] Short Barrel
-  - [ ] Thick Barrel
-  - [ ] Ramrod
-  - [ ] Flintlock Mechanism
-  - [ ] Cylinder
-  - [ ] Percussion Mechanism
-  - [ ] Bolt
-  - [ ] Spring 
+  - Tier 1
+    - [x] Bayonet
+    - [x] Stock
+    - [x] Grip
+    - [x] Long Barrel
+    - [x] Short Barrel
+    - [x] Thick Barrel
+    - [x] Ramrod
+    - [x] Flintlock Mechanism
+    - [x] Cylinder
+    - [x] Spring
+  - Tier 2
+    - [x] Crude Percussion Mechanism
+    - [x] Bolt
+    - [x] Scope
 
 - weapons
   - [ ] Field Cannon (simple item to spawn it, akin to spawn egg but not a spawn egg) (see #entities - Field Cannon)
@@ -109,7 +112,7 @@
 - Better Combat
   - [ ] Cutlass, Pistol swords, Sabres use the cutlass preset
 - Mod Menu
-  - [ ] add proper mod icon
+  - [x] add proper mod icon
 
 ## Configurables
 - [ ] add config library, save/load, server authoritative (sync with clients). Does OwO-lib have a server-controlled config api?

@@ -31,6 +31,7 @@ public interface CAVObjects {
 
     Item DEBUG = register("debug", new DebugWand(new Item.Settings()));
 
+
     Item PISTOL = register("pistol", new PistolItem(new Item.Settings(), new GunProperties.Builder().range(32).maxAmmo(1).reloadTicks(20 * 4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
     Item BLUNDERBUSS = register("blunderbuss", new BlunderbussItem(new Item.Settings(), new GunProperties.Builder().range(32).maxAmmo(1).reloadTicks(20 * 4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
     Item MUSKET = register("musket", new MusketItem(new Item.Settings(), new GunProperties.Builder().range(32).maxAmmo(1).reloadTicks(20 * 4).reloadSound(SoundEvents.BLOCK_LEVER_CLICK).build()));
@@ -52,9 +53,25 @@ public interface CAVObjects {
 //    Item BATTLE_MAP = register("battle_map", new Item(new Item.Settings()));
     Item BONE_SAW = register("bone_saw", new Item(new Item.Settings()));
 //    Item NATION_FLAG = register("nation_flag", new Item(new Item.Settings()));
-    Item RAMROD = register("ramrod", new Item(new Item.Settings()));
     Item BLOCK_RAMMER = register("block_rammer", new Item(new Item.Settings()));
     Item SPONGE = register("sponge", new Item(new Item.Settings()));
+
+    // crafting ingredients (Tier 1)
+    Item BAYONET = register("bayonet", new Item(new Item.Settings()));
+    Item STOCK = register("stock", new Item(new Item.Settings()));
+    Item GRIP = register("grip", new Item(new Item.Settings()));
+    Item LONG_BARREL = register("long_barrel", new Item(new Item.Settings()));
+    Item SHORT_BARREL = register("short_barrel", new Item(new Item.Settings()));
+    Item THICK_BARREL = register("thick_barrel", new Item(new Item.Settings()));
+    Item RAMROD = register("ramrod", new Item(new Item.Settings()));
+    Item FLINTLOCK_MECHANISM = register("flintlock_mechanism", new Item(new Item.Settings()));
+    Item CYLINDER = register("cylinder", new Item(new Item.Settings()));
+    Item SPRING = register("spring", new Item(new Item.Settings()));
+
+    // crafting ingredients (Tier 2)
+    Item CRUDE_PERCUSSION_MECHANISM = register("crude_percussion_mechanism", new Item(new Item.Settings()));
+    Item BOLT = register("bolt", new Item(new Item.Settings()));
+    Item SCOPE = register("scope", new Item(new Item.Settings()));
 
     static <T extends Item> T register(String name, T item) {
         ITEMS.put(item, CoatsAndValour.id(name));
