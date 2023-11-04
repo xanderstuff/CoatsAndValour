@@ -20,7 +20,7 @@ repositories {
 	}
 	maven {
 		name = "AzureLib"
-		url "https://dl.cloudsmith.io/public/azuredoom-mods/azurelib/maven/"
+		url = "https://libs.azuredoom.com:4443/mods"
 	}
 	maven {
 		name = "CCA"
