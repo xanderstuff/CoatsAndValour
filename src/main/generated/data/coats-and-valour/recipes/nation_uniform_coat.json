@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "w": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "w w",
+    "www",
+    "www"
+  ],
+  "result": {
+    "item": "coats-and-valour:nation_uniform_coat"
+  },
+  "show_notification": true
+}

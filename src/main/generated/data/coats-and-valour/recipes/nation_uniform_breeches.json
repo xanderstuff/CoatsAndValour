@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "w": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "www",
+    "w w",
+    "w w"
+  ],
+  "result": {
+    "item": "coats-and-valour:nation_uniform_breeches"
+  },
+  "show_notification": true
+}
