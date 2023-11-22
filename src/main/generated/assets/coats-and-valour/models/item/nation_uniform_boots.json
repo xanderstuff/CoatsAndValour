@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "coats-and-valour:item/nation_uniform_boots"
+    "layer0": "coats-and-valour:item/nation_uniform_boots",
+    "layer1": "coats-and-valour:item/nation_uniform_boots_overlay"
   }
 }

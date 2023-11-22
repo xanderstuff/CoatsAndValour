@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "coats-and-valour:item/nation_uniform_breeches"
+    "layer0": "coats-and-valour:item/nation_uniform_breeches",
+    "layer1": "coats-and-valour:item/nation_uniform_breeches_overlay"
   }
 }
