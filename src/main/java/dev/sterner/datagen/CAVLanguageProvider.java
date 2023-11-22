@@ -21,10 +21,8 @@ public class CAVLanguageProvider extends FabricLanguageProvider {
 //        builder.add(CAVObjects.SANGUINE_HUNTER, "Sanguine Hunter");
 //        builder.add(CAVObjects.PISTOL_SWORD, "Pistol Sword");
 
-        builder.add(CAVObjects.BANDAGE, "Bandage");
 //        builder.add(CAVObjects.BATTLE_MAP, "Battle Map");
         builder.add(CAVObjects.BLOCK_RAMMER, "Block Rammer");
-        builder.add(CAVObjects.BONE_SAW, "Bone Saw");
         builder.add(CAVObjects.CASESHOT, "Caseshot");
         builder.add(CAVObjects.MUSKET_SHOT, "Musket Shot");
 //        builder.add(CAVObjects.NATION_FLAG, "Nation Flag");
@@ -54,6 +52,15 @@ public class CAVLanguageProvider extends FabricLanguageProvider {
         builder.add(CAVObjects.BOLT, "Bolt");
         builder.add(CAVObjects.SCOPE, "Scope");
 
+        // misc items
+        builder.add(CAVObjects.BANDAGE, "Bandage");
+        builder.add(CAVObjects.BONE_SAW, "Bone Saw");
+        builder.add(CAVObjects.NATION_UNIFORM_HAT, "Hat");
+        builder.add(CAVObjects.NATION_UNIFORM_COAT, "Coat");
+        builder.add(CAVObjects.NATION_UNIFORM_BREECHES, "Breeches");
+        builder.add(CAVObjects.NATION_UNIFORM_BOOTS, "Boots");
+
+        // status effects
         builder.add(CAVMobEffects.BLEED, "Bleed");
         builder.add(CAVMobEffects.GANGRENE, "Gangrene");
 

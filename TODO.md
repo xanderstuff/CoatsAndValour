@@ -59,10 +59,10 @@
     - [x] item and recipe
     - [ ] removes the gangrene effect at the cost of maximum hp being reduced
   - [ ] Textile Block (see #mechanics - Textile Block)
-  - [ ] Nation Uniform: Hat (see #mechanics - customizable nation uniforms)
-  - [ ] Nation Uniform: Coat (see #mechanics - customizable nation uniforms)
-  - [ ] Nation Uniform: Breeches (see #mechanics - customizable nation uniforms)
-  - [ ] Nation Uniform: Boots (see #mechanics - customizable nation uniforms)
+  - [x] Nation Uniform: Hat (see #mechanics - customizable nation uniforms)
+  - [x] Nation Uniform: Coat (see #mechanics - customizable nation uniforms)
+  - [x] Nation Uniform: Breeches (see #mechanics - customizable nation uniforms)
+  - [x] Nation Uniform: Boots (see #mechanics - customizable nation uniforms)
 
 ## Entities
 - [ ] Field Cannon

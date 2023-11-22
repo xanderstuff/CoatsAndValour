@@ -20,10 +20,8 @@ public class CAVModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator generator) {
-        generator.register(CAVObjects.BANDAGE, Models.GENERATED);
 //        generator.register(CAVObjects.BATTLE_MAP, Models.GENERATED);
         generator.register(CAVObjects.BLOCK_RAMMER, Models.HANDHELD);
-        generator.register(CAVObjects.BONE_SAW, Models.HANDHELD);
         generator.register(CAVObjects.CASESHOT, Models.GENERATED);
 //        generator.register(CAVObjects.NATION_FLAG, Models.HANDHELD);
         generator.register(CAVObjects.POWDER_CHARGE, Models.GENERATED);
@@ -47,6 +45,14 @@ public class CAVModelProvider extends FabricModelProvider {
         generator.register(CAVObjects.CRUDE_PERCUSSION_MECHANISM, Models.GENERATED);
         generator.register(CAVObjects.BOLT, Models.GENERATED);
         generator.register(CAVObjects.SCOPE, Models.GENERATED);
+
+        // misc items
+        generator.register(CAVObjects.BANDAGE, Models.GENERATED);
+        generator.register(CAVObjects.BONE_SAW, Models.HANDHELD);
+        generator.register(CAVObjects.NATION_UNIFORM_HAT, Models.GENERATED);
+        generator.register(CAVObjects.NATION_UNIFORM_COAT, Models.GENERATED);
+        generator.register(CAVObjects.NATION_UNIFORM_BREECHES, Models.GENERATED);
+        generator.register(CAVObjects.NATION_UNIFORM_BOOTS, Models.GENERATED);
 
         generator.register(CAVObjects.DEBUG, Items.STICK, Models.GENERATED);
     }

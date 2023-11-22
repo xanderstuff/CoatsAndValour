@@ -168,5 +168,33 @@ public class CAVRecipeProvider extends FabricRecipeProvider {
 				.pattern("nn ")
 				.criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
 				.offerTo(exporter);
+		ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, CAVObjects.NATION_UNIFORM_HAT, 1)
+				.input('w', Items.WHITE_WOOL)
+				.input('l', Items.LEATHER)
+				.pattern("lll")
+				.pattern("w w")
+				.criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
+				.offerTo(exporter);
+		ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, CAVObjects.NATION_UNIFORM_COAT, 1)
+				.input('w', Items.WHITE_WOOL)
+				.pattern("w w")
+				.pattern("www")
+				.pattern("www")
+				.criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
+				.offerTo(exporter);
+		ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, CAVObjects.NATION_UNIFORM_BREECHES, 1)
+				.input('w', Items.WHITE_WOOL)
+				.pattern("www")
+				.pattern("w w")
+				.pattern("w w")
+				.criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
+				.offerTo(exporter);
+		ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, CAVObjects.NATION_UNIFORM_BOOTS, 1)
+				.input('w', Items.WHITE_WOOL)
+				.input('l', Items.LEATHER)
+				.pattern("w w")
+				.pattern("l l")
+				.criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
+				.offerTo(exporter);
 	}
 }
