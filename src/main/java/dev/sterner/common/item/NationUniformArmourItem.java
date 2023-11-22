@@ -16,12 +16,15 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.DyeableItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtElement;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class NationUniformArmourItem extends ArmorItem implements GeoItem {
+public class NationUniformArmourItem extends ArmorItem implements GeoItem, DyeableItem {
 	private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
 	private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
@@ -64,5 +67,18 @@ public class NationUniformArmourItem extends ArmorItem implements GeoItem {
 	@Override
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return cache;
+	}
+
+	@Override
+	public int getColor(ItemStack stack) {
+		// same as super()
+		NbtCompound nbtCompound = stack.getSubNbt(DISPLAY_KEY);
+		if (nbtCompound != null && nbtCompound.contains(COLOR_KEY, NbtElement.NUMBER_TYPE)) {
+			return nbtCompound.getInt(COLOR_KEY);
+		}
+
+		// the overridden method makes the default color 10511680 (0xA06540, ie brown),
+		// which is hardcoded for leather items, but we want to make it white instead
+		return 0xFFFFFF;
 	}
 }

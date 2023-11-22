@@ -1,6 +1,7 @@
 package dev.sterner;
 
 import dev.sterner.client.model.PegLegModel;
+import dev.sterner.registry.CAVColorProviders;
 import dev.sterner.registry.CAVItemRenderers;
 import dev.sterner.registry.CAVParticleTypes;
 import net.fabricmc.api.ClientModInitializer;
@@ -11,6 +12,7 @@ public class CoatsAndValourClient implements ClientModInitializer {
     public void onInitializeClient() {
         CAVParticleTypes.clientInit();
         CAVItemRenderers.clientInit();
+        CAVColorProviders.clientInit();
 
         EntityModelLayerRegistry.registerModelLayer(PegLegModel.LAYER, PegLegModel::getTexturedModelData);
     }

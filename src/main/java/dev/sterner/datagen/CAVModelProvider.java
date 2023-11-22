@@ -3,9 +3,8 @@ package dev.sterner.datagen;
 import dev.sterner.registry.CAVObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 
 public class CAVModelProvider extends FabricModelProvider {
@@ -49,11 +48,21 @@ public class CAVModelProvider extends FabricModelProvider {
         // misc items
         generator.register(CAVObjects.BANDAGE, Models.GENERATED);
         generator.register(CAVObjects.BONE_SAW, Models.HANDHELD);
-        generator.register(CAVObjects.NATION_UNIFORM_HAT, Models.GENERATED);
-        generator.register(CAVObjects.NATION_UNIFORM_COAT, Models.GENERATED);
-        generator.register(CAVObjects.NATION_UNIFORM_BREECHES, Models.GENERATED);
-        generator.register(CAVObjects.NATION_UNIFORM_BOOTS, Models.GENERATED);
+        registerGeneratedWithTwoLayers(generator, CAVObjects.NATION_UNIFORM_HAT);
+        registerGeneratedWithTwoLayers(generator, CAVObjects.NATION_UNIFORM_COAT);
+        registerGeneratedWithTwoLayers(generator, CAVObjects.NATION_UNIFORM_BREECHES);
+        registerGeneratedWithTwoLayers(generator, CAVObjects.NATION_UNIFORM_BOOTS);
 
         generator.register(CAVObjects.DEBUG, Items.STICK, Models.GENERATED);
+    }
+
+    private void registerGeneratedWithTwoLayers(ItemModelGenerator generator, Item item) {
+        // Based on net.minecraft.data.client.ItemModelGenerator.registerArmor
+        Models.GENERATED_TWO_LAYERS.upload(
+                ModelIds.getItemModelId(item),
+                TextureMap.layered(TextureMap.getId(item), TextureMap.getSubId(item, "_overlay")),
+                generator.writer,
+                Models.GENERATED_TWO_LAYERS::createJson // this is the same as using ItemModelGenerator.createArmorJson(), but without including the armour trim texture overrides
+        );
     }
 }

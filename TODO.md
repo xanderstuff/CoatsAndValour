@@ -60,6 +60,7 @@
     - [ ] removes the gangrene effect at the cost of maximum hp being reduced
   - [ ] Textile Block (see #mechanics - Textile Block)
   - [x] Nation Uniform: Hat (see #mechanics - customizable nation uniforms)
+    - [ ] make sure Nation Uniforms cannot be enchanted (check enchantment table AND anvil)
   - [x] Nation Uniform: Coat (see #mechanics - customizable nation uniforms)
   - [x] Nation Uniform: Breeches (see #mechanics - customizable nation uniforms)
   - [x] Nation Uniform: Boots (see #mechanics - customizable nation uniforms)
@@ -113,7 +114,8 @@
       - [ ] additional customization controls
   - [ ] Nation Uniforms have different main styles (stored in NBT. Probably an Enum)
   - [ ] Nation Uniforms can be dyed (stored in NBT, see leather armour)
-    - [ ] the texture used to render this armour is colored in some sections, but not others (see leather armour)
+    - [x] the inventory item texture changes color according to the primary color
+    - [ ] the chosen primary, secondary, and tertiary colours tint the different model layers
 
 ## Mod Integration
 - Better Combat
