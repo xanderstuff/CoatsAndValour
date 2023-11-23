@@ -13,8 +13,8 @@ public class CAVDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(CAVModelProvider::new);
         pack.addProvider(CAVRecipeProvider::new);
 
-        pack.addProvider(CAVTagProvider.BlockProvider::new);
-        pack.addProvider(CAVTagProvider.ItemProvider::new);
-        pack.addProvider(CAVTagProvider.EntityTypeProvider::new);
+        pack.addProvider(CAVTagProvider.BlockTagProvider::new);
+        pack.addProvider(CAVTagProvider.ItemTagProvider::new);
+        pack.addProvider(CAVTagProvider.EntityTypeTagProvider::new);
     }
 }

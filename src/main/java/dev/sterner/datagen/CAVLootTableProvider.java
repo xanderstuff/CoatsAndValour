@@ -1,6 +1,7 @@
 package dev.sterner.datagen;
 
 import com.google.common.collect.Maps;
+import dev.sterner.registry.CAVObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
@@ -21,7 +22,10 @@ public class CAVLootTableProvider {
 
         @Override
         public void generate() {
+            // note: see BlockLootTableGenerator for what methods are available,
+            // and see VanillaBlockLootTableGenerator for examples
 
+            addDrop(CAVObjects.TEXTILE_STATION);
         }
     }
 

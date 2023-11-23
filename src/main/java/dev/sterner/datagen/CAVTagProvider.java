@@ -5,25 +5,27 @@ import dev.sterner.registry.CAVTagKeys;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
 public class CAVTagProvider {
-    public static class BlockProvider extends FabricTagProvider.BlockTagProvider {
+    public static class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
-        public BlockProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        public BlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
             super(output, registriesFuture);
         }
 
         @Override
         protected void configure(RegistryWrapper.WrapperLookup arg) {
-
+            // note: see VanillaBlockTagProvider for examples
+            getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).add(CAVObjects.TEXTILE_STATION);
         }
     }
 
-    public static class ItemProvider extends FabricTagProvider.ItemTagProvider {
+    public static class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
-        public ItemProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        public ItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
             super(output, completableFuture);
         }
 
@@ -40,14 +42,15 @@ public class CAVTagProvider {
         }
     }
 
-    public static class EntityTypeProvider extends FabricTagProvider.EntityTypeTagProvider {
+    public static class EntityTypeTagProvider extends FabricTagProvider.EntityTypeTagProvider {
 
-        public EntityTypeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        public EntityTypeTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
             super(output, completableFuture);
         }
 
         @Override
         protected void configure(RegistryWrapper.WrapperLookup arg) {
+            // note: see VanillaEntityTypeTagProvider for examples
 
         }
     }
