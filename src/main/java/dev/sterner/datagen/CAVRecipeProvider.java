@@ -196,5 +196,15 @@ public class CAVRecipeProvider extends FabricRecipeProvider {
 				.pattern("l l")
 				.criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
 				.offerTo(exporter);
+
+		// blocks
+		ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, CAVObjects.TEXTILE_STATION, 1)
+				.input('p', ItemTags.PLANKS)
+				.input('s', CAVObjects.SPRING)
+				.pattern("ss")
+				.pattern("pp")
+				.pattern("pp")
+				.criterion(hasItem(CAVObjects.SPRING), conditionsFromItem(CAVObjects.SPRING))
+				.offerTo(exporter);
 	}
 }

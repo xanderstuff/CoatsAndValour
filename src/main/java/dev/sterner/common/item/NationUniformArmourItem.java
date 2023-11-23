@@ -77,8 +77,8 @@ public class NationUniformArmourItem extends ArmorItem implements GeoItem, Dyeab
 			return nbtCompound.getInt(COLOR_KEY);
 		}
 
-		// the overridden method makes the default color 10511680 (0xA06540, ie brown),
-		// which is hardcoded for leather items, but we want to make it white instead
+		// super() uses a default color of 10511680 (0xA06540, ie brown)
+		// which is hardcoded for leather items, but we want it to be white instead
 		return 0xFFFFFF;
 	}
 }

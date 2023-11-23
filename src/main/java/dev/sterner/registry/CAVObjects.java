@@ -1,18 +1,23 @@
 package dev.sterner.registry;
 
 import dev.sterner.CoatsAndValour;
+import dev.sterner.common.block.*;
 import dev.sterner.common.item.*;
 import dev.sterner.common.util.GunProperties;
 import dev.sterner.common.util.ProjectileProperties;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -75,6 +80,9 @@ public interface CAVObjects {
     Item NATION_UNIFORM_COAT = register("nation_uniform_coat", new NationUniformArmourItem(CAVArmorMaterials.NATION_UNIFORM, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     Item NATION_UNIFORM_BREECHES = register("nation_uniform_breeches", new NationUniformArmourItem(CAVArmorMaterials.NATION_UNIFORM, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     Item NATION_UNIFORM_BOOTS = register("nation_uniform_boots", new NationUniformArmourItem(CAVArmorMaterials.NATION_UNIFORM, ArmorItem.Type.BOOTS, new Item.Settings()));
+
+    // blocks
+    Block TEXTILE_STATION = register("textile_station", new TextileStationBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).instrument(Instrument.BASS).strength(2.5f).sounds(BlockSoundGroup.WOOD).burnable()), true);
 
     static <T extends Item> T register(String name, T item) {
         ITEMS.put(item, CoatsAndValour.id(name));

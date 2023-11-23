@@ -60,6 +60,9 @@ public class CAVLanguageProvider extends FabricLanguageProvider {
         builder.add(CAVObjects.NATION_UNIFORM_BREECHES, "Breeches");
         builder.add(CAVObjects.NATION_UNIFORM_BOOTS, "Boots");
 
+        // blocks
+        builder.add(CAVObjects.TEXTILE_STATION, "Textile Station");
+
         // status effects
         builder.add(CAVMobEffects.BLEED, "Bleed");
         builder.add(CAVMobEffects.GANGRENE, "Gangrene");

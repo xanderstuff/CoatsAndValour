@@ -14,7 +14,8 @@ public class CAVModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator generator) {
-
+        // note: see BlockStateModelGenerator for vanilla examples
+        generator.registerNorthDefaultHorizontalRotated(CAVObjects.TEXTILE_STATION, TexturedModel.ORIENTABLE_WITH_BOTTOM); // similar to vanilla's Loom
     }
 
     @Override
@@ -62,7 +63,7 @@ public class CAVModelProvider extends FabricModelProvider {
                 ModelIds.getItemModelId(item),
                 TextureMap.layered(TextureMap.getId(item), TextureMap.getSubId(item, "_overlay")),
                 generator.writer,
-                Models.GENERATED_TWO_LAYERS::createJson // this is the same as using ItemModelGenerator.createArmorJson(), but without including the armour trim texture overrides
+                Models.GENERATED_TWO_LAYERS::createJson // ItemModelGenerator.createArmorJson() simplifies to this when you exclude the armour trim texture overrides
         );
     }
 }
